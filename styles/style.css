@@ -1,0 +1,114 @@
+* {padding: 0; margin: 0; border: 0;}
+*, *:before, *:after {-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+a:focus, a:active {outline: none}
+a, a:visited, a:hover {text-decoration: none}
+ul li {list-style: none}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #F5F5F5;
+    color: #808080;
+}
+
+.queue-visualizer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header {
+    align-self: center;
+    margin: 50px 0;
+}
+
+.control-elements {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.queue-container {
+    margin-top: 70px;
+    width: 60%;
+    display: flex;
+    flex-flow: row wrap;
+    align-self: center;
+}
+
+[class$="-button"] {
+    font-size: 24px;
+    padding: 20px;
+    background: #BEBEBE;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 4px;
+}
+
+[class$="-button"]:hover {
+    background-color: #D0D0D0;
+}
+
+.queue-item {
+    width: 120px;
+    height: 120px;
+    background: #DCDCDC;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 4px;
+    margin: 0 16px 16px 0;
+}
+
+.item-text {
+    padding: 12px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    word-wrap: break-word;
+}
+
+.queue-data-input {
+    margin-top: 20px;
+    background: #E1E7EA;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 24px;
+}
+
+.input-error {
+    height: 12px;
+    padding-top: 3px;
+    font-size: 14px;
+    text-align: center;
+    color: lightsalmon;
+}
+
+::placeholder {
+    color: #C4CFD5;
+}
+
+@keyframes blink_green {
+    50% { background: #DAF7A6; }
+}
+
+@keyframes blink_red {
+    50% { background: #F88379; }
+}
+
+.is-being-added {
+    animation: blink_green .25s step-end infinite alternate;
+}
+
+.is-being-removed {
+    animation: blink_red .25s step-end infinite alternate;
+}
